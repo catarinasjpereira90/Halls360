@@ -1,0 +1,139 @@
+.hero {
+    background-image: linear-gradient(rgba(29, 28, 81, 0.7), rgba(29, 28, 81, 0.7)),
+        url("https://github.com/sofiarnunes/Halls-360Project/blob/main/img/Background_update.png?raw=true");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    @include mq(0, 512px) {
+        background-image: url("https://raw.githubusercontent.com/sofiarnunes/Halls-360Project/main/img/Imagem_Background_Mobile.png");
+        width: 100%;
+        overflow: hidden;
+    }
+    .wrapper {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 auto;
+        max-width: 100%;
+        @include mq(0, 512px) {
+            max-width: 340px !important;
+        }
+        div.rules {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20%;
+            @include mq(0, 512px) {
+                flex-direction: column;
+                margin-top:30%;
+            }
+            .rules-01 {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                margin: 30px;
+                flex: 1;
+                flex-wrap: wrap;
+                height:100px;
+                @include mq(0, 512px) {
+                    margin: 0;
+                }
+                .square {
+                    height: 45px;
+                    width: 45px;
+                    background-color: $light-blue;
+                    transform: rotate(45deg);
+                    border-radius: 10px;
+                    .number {
+                        position: absolute;
+                        height: 45px;
+                        width: 45px;
+                        transform: translate(-50%, -50%);
+                        transform: rotate(-45deg);
+                        h1 {
+                            font-size: 26px;
+                            font-weight: 700;
+                            text-align: center;
+                            line-height: 45px;
+                            margin: 0;
+                            @include mq(0, 512px) {
+                                font-size: 36px;
+                                font-weight:700;
+                            }
+                        }
+                    }
+                }
+                p {
+                    font-size: 16px;
+                    font-weight: 700;
+                    margin: 30px;
+                    text-align: center;
+                    height: 32px;
+                    @include mq(0, 512px) {
+                        font-size: 14px;
+                        margin:20px;
+                        font-weight:700;
+                        height:14px;
+                    }
+                }
+            }
+        }
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        label {
+            font-size: 25px;
+            font-weight: 400;
+            color: white;
+            margin: 27px;
+            @include mq(0, 512px) {
+                font-size: 14px;
+                margin:5px;
+                margin-top:10px;
+            }
+        }
+        input {
+            height: 54px;
+            width: 174px;
+            border-radius: 15px;
+            margin: 10px;
+            @include mq(0, 512px) {
+                height:49px;
+                width:200px;
+                margin:5px;
+            }
+        }
+        input#code {
+            text-align: center;
+            font-size: 25px;
+            font-weight: 400;
+            @include mq(0, 512px) {
+                font-size: 14px;
+            }
+        }
+        input.btn {
+            color: white;
+            background-color: $crava-light;
+            font-size: 16px;
+            cursor: pointer;
+            -webkit-appearance: none;
+            padding: 5px 10px;
+            &:hover{
+                background-color: $crava;
+            }
+            @include mq(0, 512px) {
+                font-size: 14px;
+                margin-bottom:5px;
+            }
+        }
+    }
+}

@@ -1,0 +1,83 @@
+footer{
+    height: 105px;
+    background-color: $light-blue;
+    color: $white;
+    position: relative;
+    bottom: 100px;
+    text-align: left;
+    @include mq(0,512px){
+        height: 200px;
+        width: 100%;
+        overflow: hidden;
+    }
+    .logo-mobile{
+        img{
+            display: none;
+            cursor: pointer;
+            @include mq(0,512px){
+                display: block;
+                height: 100px;
+                position: absolute;
+                top: 10%;
+                right: 50%;
+                transform: translateX(-50%);
+            } 
+        }
+    }
+    .flex-container{
+        margin-top: 2px;
+        @include mq(0,512px){
+            max-width: 340px !important;
+            align-items: flex-start;
+            flex-direction: column;
+        }        
+        div{
+            ul{
+                @include mq(0,512px){
+                    position: relative;
+                    left: 95%;
+                } 
+                .logo{
+                    @include mq(0,512px){
+                        display: none;
+                    }  
+                }
+                li{
+                    cursor: pointer;
+                    font-size: 13px;
+                    margin: 0 15px;
+                    text-transform: uppercase;
+                    color: $white;
+                    font-weight: 600;
+                    img{
+                        height: 100px;
+                    }
+                    @include mq(0,512px){
+                        margin: 10px 0;
+                    } 
+                }
+            }
+        }
+        .icons{
+            vertical-align: middle;
+            @include mq(0,512px){
+                position: absolute;
+                right: 57%;
+                top: 70%;
+            } 
+            i{
+                cursor: pointer;
+                font-size: 35px;
+                margin: 0 15px;
+                color: $white;
+                &[class="fab fa-instagram"]{
+                    font-size: 30px;
+                    color: $light-blue;
+                    background-color: $white;
+                    padding: 3px 5px;
+                    border-radius: 100%;
+                }
+            }
+        }
+    }
+}
